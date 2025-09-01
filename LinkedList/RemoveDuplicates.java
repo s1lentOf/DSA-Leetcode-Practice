@@ -7,7 +7,7 @@ class Solution {
     // to see if any node has the same value as the `slow` node. If a duplicate is found,
     // we skip it by changing the `next` pointer of `fast` to remove that node from the list,
     // and reduce the length. Otherwise, we just move `fast` ahead.
-    public void removeDuplicates() {
+    public void removeDuplicates(Node head) {
         if (length <= 1) return;
 
         Node slow = head;
@@ -33,7 +33,7 @@ class Solution {
     // More optimal solution for this problem would be by using set. That way, we are iterating over the LL,
     // and if the value of the current node is in the set, we remove this node. Otherwise, we just add this
     // value to the set
-    public void removeDuplicates() {
+    public void removeDuplicates(Node head) {
         if (length <= 1) return;
 
         Set<Integer> values = new HashSet<>();
